@@ -41,16 +41,16 @@ try: compiled_file = compile(file,'','exec'); encoded_code = marshal.dumps(compi
 except TypeError: banner(); print(f"{g}[{r}-{g}] {w}File Already Compiled{r}!!!"); exit()
 
 name = file_path.replace(".py","")
-open(f"{name}_Encoded.py","w").write("""
-─────▄───▄
-─▄█▄─█▀█▀█─▄█▄
-▀▀████▄█▄████▀▀
-─────▀█▀█▀
-♦ PyWiz
-• Github: https://github.com/PyWizs/Marshal-Encoder
+open(f"{name}_Encoded.py","w", encoding="utf8").write(f"""
+# ─────▄───▄
+# ─▄█▄─█▀█▀█─▄█▄
+# ▀▀████▄█▄████▀▀
+# ─────▀█▀█▀
+# ♦ PyWiz
+# • Github: https://github.com/PyWizs/Marshal-Encoder
 
 import marshal
-exec(marshal.loads(' + repr(encoded_code) + '))
+exec(marshal.loads({repr(encoded_code)}))
 """)
 
 print(f"""
