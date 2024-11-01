@@ -42,7 +42,12 @@ except TypeError: banner(); print(f"{g}[{r}-{g}] {w}File Already Compiled{r}!!!"
 
 name = file_path.replace(".py","")
 open(f"{name}_Encoded.py","w").write("""
-
+─────▄───▄
+─▄█▄─█▀█▀█─▄█▄
+▀▀████▄█▄████▀▀
+─────▀█▀█▀
+♦ PyWiz
+• Github: https://github.com/PyWizs/Marshal-Encoder
 
 import marshal
 exec(marshal.loads(' + repr(encoded_code) + '))
