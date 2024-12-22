@@ -4,7 +4,7 @@
 
 import os,marshal,time,random
 try: from colorama import init
-except: os.system('pip install colorama'); from colorama import *
+except: os.system('pip install colorama'); from colorama import init
 
 init()
 
